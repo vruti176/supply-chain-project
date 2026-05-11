@@ -1,10 +1,17 @@
 import pandas as pd
 from datetime import date
+import os
 
 def scrape_data():
     print("Loading data...")
     
-    df = pd.read_csv('data/DataCoSupplyChainDataset.csv', encoding='latin-1')
+    # Download dataset if it doesn't exist
+    if not os.path.exists('data/DataCoSupplyChainDataset.csv'):
+        os.makedirs('data', exist_ok=True)
+        url = "https://raw.githubusercontent.com/vruti176/supply-chain-project/main/data/DataCoSupplyChainDataset.csv"
+        df = pd.read_csv(url, encoding='latin-1')
+    else:
+        df = pd.read_csv('data/DataCoSupplyChainDataset.csv', encoding='latin-1')
     
     df = df[[
         'Category Name',
