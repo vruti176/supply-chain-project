@@ -1,0 +1,24 @@
+{
+  "name": "Supply Chain Pro",
+  "dataColors": [
+    "#2E4057",
+    "#048A81",
+    "#54C6EB",
+    "#EFA00B",
+    "#E63946",
+    "#457B9D",
+    "#A8DADC",
+    "#1D3557"
+  ],
+  "background": "#F8F9FA",
+  "foreground": "#2E4057",
+  "tableAccent": "#048A81",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "fontFamily": [{"value": "Segoe UI"}],
+        "fontSize": [{"value": 11}]
+      }
+    }
+  }
+}
